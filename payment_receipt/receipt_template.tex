@@ -1,0 +1,88 @@
+\documentclass[a4paper]{article}
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[pdfencoding=auto,unicode]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+
+% FIXME: We should check if any of the variables is not set and have good defaults.
+%        For now use N/A.
+%% Conference Details Variables 
+\newcommand{\EventFullName}{N/A}
+\newcommand{\EventStartEnd}{N/A}
+\newcommand{\EventLocation}{N/A}
+\newcommand{\EventURL}{N/A}
+\newcommand{\EventLogo}{N/A}
+\newcommand{\AuthorName}{N/A}
+
+%% Payment Details Variables
+\newcommand{\ConferenceFee}{N/A}
+\newcommand{\DateOfPayment}{N/A}
+\newcommand{\PaidWith}{N/A}
+\newcommand{\FullAmount}{N/A}
+\newcommand{\ExtraFees}{N/A}
+\newcommand{\PaymentMethod}{N/A}
+\newcommand{\TransactionID}{N/A}
+
+\input{params.tex}
+
+% Add more vertical space to the table rows.
+\setlength\extrarowheight{5pt}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}
+  {@{}l@{\extracolsep{0.0in}}|@{\extracolsep{0.125in}}l@{}}
+  \parbox{4.2in}{\raggedright
+    \includegraphics[height=2.0in]{\EventLogo}
+  } &
+  \parbox[t][1.0in]{2.5in}{\textbf{\EventFullName}\\\\
+    {\url \EventURL}}\\
+\end{tabular*}
+
+\vskip 2.3cm
+
+\begin{center}
+  
+  {\LARGE \textbf{Payment Receipt}}
+
+  \rule{2cm}{0.25pt}
+
+  \vskip 2.3cm
+
+\end{center}
+
+Dear \AuthorName,
+
+This is a confirmation that we have received your payment for the \EventFullName,
+\EventStartEnd, \EventLocation. Please find the details below:
+
+\vskip 1cm
+
+\rowcolors{2}{gray!25}{white}
+\begin{center}
+  \begin{tabular}{l | r}
+    \rowcolor{gray!50}
+    Conference fee & \ConferenceFee   \\
+    Payment date   & \DateOfPayment   \\
+    Paid with      & \PaidWith        \\
+    Paid amount    & \FullAmount      \\
+    Extra fees     & \ExtraFees       \\
+    Payment method & \PaymentMethod   \\
+    Transaction ID & \TransactionID   \\
+  \end{tabular}
+\end{center}
+
+\vskip 1cm
+
+We are looking forward to seeing you at the conference.
+
+\vskip 1cm
+
+\mbox{}\hfill Best regards,
+
+\mbox{}\hfill The Conference Chairs
+
+\vfill
+
+\end{document}
