@@ -14,15 +14,7 @@
 \newcommand{\EventURL}{N/A}
 \newcommand{\EventLogo}{N/A}
 \newcommand{\AuthorName}{N/A}
-
-%% Payment Details Variables
-\newcommand{\ConferenceFee}{N/A}
-\newcommand{\DateOfPayment}{N/A}
-\newcommand{\PaidWith}{N/A}
-\newcommand{\FullAmount}{N/A}
-\newcommand{\ExtraFees}{N/A}
-\newcommand{\PaymentMethod}{N/A}
-\newcommand{\TransactionID}{N/A}
+\newcommand{\InstituteName}{N/A}
 
 \input{params.tex}
 
@@ -48,6 +40,14 @@
 
   \rule{2cm}{0.25pt}
 
+  \vskip 0.2cm
+
+  \large\AuthorName
+
+  \vskip 0.1cm
+
+  \small\InstituteName
+
   \vskip 2.3cm
 
 \end{center}
@@ -63,13 +63,7 @@ This is a confirmation that we have received your payment for the \EventFullName
 \begin{center}
   \begin{tabular}{l | r}
     \rowcolor{gray!50}
-    Conference fee & \ConferenceFee   \\
-    Payment date   & \DateOfPayment   \\
-    Paid with      & \PaidWith        \\
-    Paid amount    & \FullAmount      \\
-    Extra fees     & \ExtraFees       \\
-    Payment method & \PaymentMethod   \\
-    Transaction ID & \TransactionID   \\
+    \input{table.tex}
   \end{tabular}
 \end{center}
 
